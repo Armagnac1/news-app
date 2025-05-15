@@ -29,7 +29,7 @@
 
 <script setup>
 import { ref, watch, onUnmounted } from 'vue';
-import AppLayout from '@/Layouts/AppLayout.vue';
+import AppLayout from '@/layouts/AppLayout.vue';
 import debounce from 'lodash/debounce';
 import axios from 'axios';
 import NewsSection from '@/components/Dashboard/NewsSection.vue';

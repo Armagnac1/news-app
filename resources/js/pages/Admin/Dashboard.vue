@@ -44,11 +44,10 @@
 </template>
 
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue';
-import StatsCard from '@/Components/Dashboard/StatsCard.vue';
-import UsersTable from '@/Components/Dashboard/UsersTable.vue';
-import VerificationCodesTable from '@/Components/Dashboard/VerificationCodesTable.vue';
-import NewsSection from '@/Components/Dashboard/NewsSection.vue';
+import AppLayout from '@/layouts/AppLayout.vue';
+import UsersTable from '@/components/Dashboard/UsersTable.vue';
+import VerificationCodesTable from '@/components/Dashboard/VerificationCodesTable.vue';
+import NewsSection from '@/components/Dashboard/NewsSection.vue';
 import { ref } from 'vue';
 import { router } from '@inertiajs/vue3';
 import { Loader2 } from 'lucide-vue-next';
