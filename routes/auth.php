@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\TelegramVerificationController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,15 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::get('verify-telegram', [TelegramVerificationController::class, 'show'])
+        ->name('telegram-verification.notice');
+
+    Route::post('resend-telegram', [TelegramVerificationController::class, 'store'])
+        ->name('telegram-verification.resend');
+
+    Route::post('verify-telegram', [TelegramVerificationController::class, 'update'])
+        ->name('telegram-verification.verify');
+
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
 
