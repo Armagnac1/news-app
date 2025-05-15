@@ -18,8 +18,8 @@
 </template>
 
 <script setup>
-import NewsCard from '@/Components/NewsCard.vue';
-import Pagination from '@/Components/Pagination.vue';
+import NewsCard from '@/components/NewsCard.vue';
+import Pagination from '@/components/Pagination.vue';
 
 defineProps({
   news: {
